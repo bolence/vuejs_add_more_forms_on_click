@@ -1,8 +1,11 @@
 # add-more-forms-on-one-page
 
 ### About project
-This project is from my private project developed with [Laravel](https://laravel.com) and [Vuejs](https://vuejs.org). 
-I had a requirements to build feature how user would be able to add more forms on one page. User need to choose one contract and per contract he needs to add more form on page and enter bill information in that forms.
+This component is from my private project developed with [Laravel](https://laravel.com) and [Vuejs](https://vuejs.org). 
+
+I had a requirements to build vuejs component how user would be able to add more forms on one page. 
+
+User need to choose one contract and per contract he needs to add more form on page and enter bill information in that forms.
 
 ### Requirements
 In order to use the CLI, you’ll need to have [Node.js] (https://nodejs.org) version 8 or above installed (8.10.0+ is recommended).
