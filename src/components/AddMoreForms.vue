@@ -1,7 +1,9 @@
 <template>
     <div>
         <center>
-            <b-button variant="primary" @click.prevent="addForm">Add form<span v-show="countForms > 0">: {{ countForms }} forms</span></b-button>
+            <b-button variant="primary" @click.prevent="addForm"  v-if="!maxFormAchieved">Add form<span v-show="countForms > 0">: {{ countForms }} forms</span></b-button>
+            <b-button variant="danger" :disabled="true" v-else>Max form count achived</b-button>
+
         </center>
     <br>
         <b-container fluid class="bv-example-row">
@@ -55,6 +57,8 @@
                     lastname: [],
                 },
                 formSaved: false,
+                maxForms: 10,
+                maxFormAchieved: false,
                
             }
         },
@@ -67,20 +71,29 @@
                     lastname: []
                 });
                 this.countForms++;
+                if(this.countForms == this.maxForms) {
+                    this.maxFormAchieved = true;
+                }
             },
 
             removeForm(index) {
                 this.forms.splice(index, 1);
-                this.countForms -= 1;
+                this.countForms--;
+                console.log(this.countForms);
                 this.data.username[index];
                 this.data.lastname[index];
+                if(this.countForms == this.maxForms) {
+                    this.maxFormAchieved = true;
+                }
             },
 
             removeAll() {
                 this.forms = [];
                 this.countForms = 0;
+
                 this.data.username = [];
                 this.data.lastname = [];
+                this.maxFormAchieved = false;
             },
 
             saveForm() {
