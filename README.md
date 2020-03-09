@@ -8,12 +8,7 @@ I had a requirements to build vuejs component how user would be able to add more
 User need to choose one contract and per contract he needs to add more form on page and enter bill information in that forms.
 
 ### Requirements
-In order to use the CLI, you’ll need to have [Node.js] (https://nodejs.org) version 8 or above installed (8.10.0+ is recommended).
-To install the Vue CLI, you need to run this command in your terminal:
-```
-npm i -g @vue/cli
-```
-This will install vue-cli globally to you computer. Once it is installed, you’ll have access to the vue binary from your command line.
+In order to use this project, you’ll need to have [Node.js] (https://nodejs.org) version 8 or above installed (8.10.0+ is recommended).
 
 ## Project setup
 First, you need to clone this project to your local environment. Run this commands below:
